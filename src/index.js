@@ -11,14 +11,26 @@ function updateTime() {
     );
   }
 
-  let sydneyElement = document.querySelector("#sydney");
-  if (sydneyElement) {
-    let sydneyDateElement = sydneyElement.querySelector(".date");
-    let sydneyTimeElement = sydneyElement.querySelector(".time");
-    let sydneyTime = moment().tz("sydney");
+  let funchalElement = document.querySelector("#funchal");
+  if (funchalElement) {
+    let funchalDateElement = funchalElement.querySelector(".date");
+    let funchalTimeElement = funchalElement.querySelector(".time");
+    let funchalTime = moment().tz("funchal");
 
-    sydneyDateElement.innerHTML = sydneyTime.format("MMMM	Do YYYY");
-    sydneyTimeElement.innerHTML = sydneyTime.format(
+    funchalDateElement.innerHTML = funchalTime.format("MMMM	Do YYYY");
+    funchalTimeElement.innerHTML = funchalTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let indiaElement = document.querySelector("#india");
+  if (indiaElement) {
+    let indiaDateElement = indiaElement.querySelector(".date");
+    let indiaTimeElement = indiaElement.querySelector(".time");
+    let indiaTime = moment().tz("funchal");
+
+    indiaDateElement.innerHTML = indiaTime.format("MMMM	Do YYYY");
+    indiaTimeElement.innerHTML = indialTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
